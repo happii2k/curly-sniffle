@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <title>Request</title>
+</head>
+<body>
+    <div class="nav-bar fade-in">
+        <div class="left-section"> PU Faculty </div>
+        <div class="right-section">
+            <a href="Homepage.html" class="home">Home</a>
+            <a href="request.html" class="request-us">Request</a>
+            <a href="https://paruluniversity.ac.in/" target="_blank" class="join-now">Join</a>
+            <div class="about">About</div>
+            <div class="logo-button">
+                <img src="images/logo-1.png" class="logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="request-form-container">
+        <h1>Request Faculty Data</h1>
+        <form id="request-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" required>
+    
+            <label for="details">Details:</label>
+            <textarea id="details" name="details" required></textarea>
+    
+            <button type="submit">Submit Request</button>
+        </form>
+        <div id="message"></div> <!-- Added div for feedback -->
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 PU Faculty | <a href="mailto:happywwe2k@gmail.com">Contact Us</a></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/happii2k/"><img src="images/insta-icon.png" alt="Instagram"></a>
+            <a href="https://x.com/Happywwe2k"><img src="images/twitter-icon1.png" alt="Twitter"></a>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script> 
+</body>
+</html>
