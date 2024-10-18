@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="home.css">
+
+<html>
+    <head>
+
+        <title> Home Page </title>
+        
+    </head>
+    <body>  
+            <div class="nav-bar fade-in">
+                <div class="left-section"> 
+                    PU faculty 
+                </div>
+                <div class="middle-section">
+                    <input class="search-box" type="text" placeholder="Search" id="searchInput">
+                     <button class="search-button" id="searchButton">
+                      <img class="search-icon" src="search-icon.png" alt="Search Icon">
+                      <div class="tooltip"> search</div>
+                    
+                     </button>
+                    
+
+                    
+                 </div>
+                    <div class="right-section">
+                        <div > <a href="Homepage.html" class="home">Home</a> </div>
+                        <div > <a href="request.html" class="request-us">Request</a></div>
+                        <div > <a href="https://paruluniversity.ac.in/" target="_blank" class="join-now">
+                            Join
+                          </a></div>
+                        
+                        <div class="about"> About </div>
+                        <div class="logo-button"> 
+                            <div><img src="logo-1.png" class="logo"> 
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                
+            </div>
+            <div id="results" class="results-container"> </div>
+               
+                
+            </div>
+        </div>
+        
+            <div class="footer">
+                <p>&copy; 2024 PU Faculty | <a href="mailto:happywwe2k@gmail.com">Contact Us</a></p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/happii2k/"><img src="insta-icon.png" alt="Instagram"></a>
+                    <a href="https://x.com/Happywwe2k"><img src="twitter-icon1.png" alt="Twitter"></a>
+                </div>
+            </div>
+            <script>
+                     // Add an event listener to the search button
+                document.getElementById("searchButton").addEventListener("click", function() {
+                    const searchInput = document.getElementById("searchInput").value.trim();
+                    if (searchInput) {
+                        // Redirect to results.html with the search query as a URL parameter
+                        window.location.href = `results.html?query=${encodeURIComponent(searchInput)}`;
+                    }
+                });
+                let lastScrollTop = 0; // Keep track of the last scroll position
+
+                window.onscroll = function() {
+                    var navBar = document.querySelector(".nav-bar");
+                    var searchBar = document.querySelector(".search-box");
+                    var searchButton = document.querySelector(".search-button");
+                    var currentScrollTop = window.scrollY; // Current scroll position
+                
+                    if (currentScrollTop > lastScrollTop && currentScrollTop > 50) { // Scrolling down
+                        if (navBar) {
+                            navBar.classList.add("scrolled");
+                        }
+                        if (searchBar) {
+                            searchBar.classList.add("scrolled"); // Add class to search bar when scrolled
+                        }
+                        if (searchButton) {
+                            searchButton.classList.add("scrolled");
+                        }
+                    } else if (currentScrollTop < lastScrollTop) { // Scrolling up
+                        if (navBar) {
+                            navBar.classList.remove("scrolled");
+                        }
+                        if (searchBar) {
+                            searchBar.classList.remove("scrolled"); // Remove class from search bar when scrolling up
+                        }
+                        if (searchButton) {
+                            searchButton.classList.remove("scrolled");
+                        }
+                    }
+                
+                    lastScrollTop = currentScrollTop; // Update last scroll position
+                };
+                
+                  </script>
+                  <script src="results.js"></script> 
+
+
+    </body>
+
+</html>
